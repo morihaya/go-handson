@@ -13,20 +13,47 @@ func main() {
 	rand.Seed(t)
 	// xは0-6の間の値になる
 
-	s := rand.Intn(6)
-	println(s)
-	x := s + 1
-	//x := 6
+	/*
+		for i := 0; i < 7; i = i + 1 {
+			s := rand.Intn(6)
+			//println(s)
+			x := s + 1
+			//x := 6
 
-	var msg string
-	if x == 6 {
-		msg = "大吉"
-	} else if x == 5 || x == 4 {
-		msg = "中吉"
-	} else if x == 2 || x == 3 {
-		msg = "小吉"
-	} else if x == 1 {
-		msg = "凶"
+			var msg string
+			if x == 6 {
+				msg = "大吉"
+			} else if x == 5 || x == 4 {
+				msg = "中吉"
+			} else if x == 2 || x == 3 {
+				msg = "小吉"
+			} else if x == 1 {
+				msg = "凶"
+			}
+			fmt.Println(i, "日目", msg)
+		}
+	*/
+	i := 0
+	for {
+		s := rand.Intn(6)
+		//println(s)
+		x := s + 1
+		//x := 6
+
+		var msg string
+		if x == 6 {
+			msg = "大吉"
+		} else if x == 5 || x == 4 {
+			msg = "中吉"
+		} else if x == 2 || x == 3 {
+			msg = "小吉"
+		} else if x == 1 {
+			msg = "凶"
+		}
+		fmt.Println(i, "日目", msg)
+		i = i + 1
+		if x == 6 {
+			break
+		}
 	}
-	fmt.Println(msg)
 }
