@@ -1,5 +1,6 @@
 package main
 
 func main() {
-	println("Hello, 世界")
+	var str string = "Hello World!!"
+	println(str)
 }
